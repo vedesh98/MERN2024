@@ -20,6 +20,7 @@ const register = async (request, response) => {
         if (userexist) {
             return response.json({ msg: "email already exists" })
         }
+        
 
         const NewUser = await User.create({
             username, email, phone, password
