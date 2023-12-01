@@ -14,13 +14,11 @@ const home = async (request, response) => {
 
 const register = async (request, response) => {
     try {
-
         const { username, phone, email, password } = request.body;
         const userexist = await User.findOne({ email: email });
         if (userexist) {
             return response.json({ msg: "email already exists" })
         }
-        
 
         const NewUser = await User.create({
             username, email, phone, password
