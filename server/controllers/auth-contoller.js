@@ -21,7 +21,10 @@ const register = async (request, response) => {
         }
 
         const NewUser = await User.create({
-            username, email, phone, password
+            username,
+            email,
+            phone,
+            password: hash_password
         })
 
         response

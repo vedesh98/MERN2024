@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -25,7 +26,22 @@ const userSchema = new mongoose.Schema({
 })
 
 
-// define collection name 
+userSchema.pre('save', async function () {
+    const user = this;
+    if (!user.isModified("password")) {
+        next();
+    }
+    try {
+        // hash the password
+        const saltRound = 10;
+        const hash_password = await bcrypt.hash(password, saltRound);
+        user.password = hash_password;
 
+    } catch (error) {
+        next(error);
+    }
+})
+
+// define collection name 
 const User = new mongoose.model("User", userSchema);
 module.exports = User;
