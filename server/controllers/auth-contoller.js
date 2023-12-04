@@ -10,7 +10,12 @@ module.exports.home = async (request, response) => {
             .json({
                 message: "welcome to MERN series"
             });
-    } catch (error) {
+    } catch (err) {
+        const error = {
+            message: "internal server error",
+            status: 500,
+            extraDetails: err
+        }
         next(error);
     }
 }
