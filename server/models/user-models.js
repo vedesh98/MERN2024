@@ -73,7 +73,6 @@ userSchema.methods.compareToken = async function (password) {
     try {
 
         let compareResult = {};
-
         const user = await bcrypt.compare(password, this.password);
         if (user) {
 
@@ -95,6 +94,7 @@ userSchema.methods.compareToken = async function (password) {
         console.error(error);
     }
 }
+
 // define collection name 
 const User = new mongoose.model("User", userSchema);
 module.exports = User;
