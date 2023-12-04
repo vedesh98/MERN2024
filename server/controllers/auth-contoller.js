@@ -1,6 +1,9 @@
+const bcrypt = require("bcrypt");
 const User = require("../models/user-models");
 
-const home = async (request, response) => {
+
+
+module.exports.home = async (request, response) => {
     try {
         response
             .status(200)
@@ -8,34 +11,75 @@ const home = async (request, response) => {
                 message: "welcome to MERN series"
             });
     } catch (error) {
-        console.log(error);
+        next(error);
     }
 }
 
-const register = async (request, response) => {
+module.exports.register = async (request, response) => {
     try {
         const { username, phone, email, password } = request.body;
+
         const userexist = await User.findOne({ email: email });
+
+
         if (userexist) {
             return response.json({ msg: "email already exists" })
         }
-
         const NewUser = await User.create({
             username,
             email,
             phone,
-            password: hash_password
-        })
+            password
+        });
 
         response
-            .status(200)
-            .json(NewUser);
+            .status(201)
+            .json({
+                msg: NewUser,
+                token: await NewUser.getrateToken(),
+                userId: NewUser._id.toString(),
+            });
 
-    } catch (error) {
-        response.send(500).json({
-            msg: "internal server error"
-        })
+    } catch (err) {
+        const error = {
+            message: "internal server error",
+            status: 500,
+            extraDetails: err
+        }
+        next(error);
     }
 }
 
-module.exports = { home, register };
+// *----------------------
+//* User Login Logic
+// *----------------------
+module.exports.login = async (request, response) => {
+    try {
+        const { email, password } = request.body;
+
+        const FindUser = await User.findOne({ email });
+
+        if (!FindUser) {
+            response.status(400).send({
+                message: "Invalid Credentials"
+            });
+        }
+
+        const compareResult = await FindUser.compareToken(password);
+        response.status(compareResult.status).json(compareResult);
+
+
+    } catch (err) {
+        const error = {
+            message: "internal server error",
+            status: 500,
+            extraDetails: err
+        }
+        next(error);
+    }
+}
+
+
+// *----------------------
+//* Contact Logic
+// *----------------------
