@@ -1,11 +1,11 @@
-export const Login = () => {
+export const Register = () => {
   return (
     <>
-      <selction>
+      <section>
         <main>
-          <div className="section-login">
+          <div className="section-registration">
             <div className="container grid grid-two-cols">
-              <div className="login-image">
+              <div className="resitration-image">
                 <img
                   src="/images/channels4_profile.jpg"
                   alt="testing image"
@@ -13,9 +13,29 @@ export const Login = () => {
                   height="500"
                 />
               </div>
-              <div className="login-form">
-                <h1 className="main-deading mb-3">login form</h1>
+              <div className="registration-form">
+                <h1 className="main-deading mb-3">registration form</h1>
                 <form action="">
+                  <div>
+                    <label htmlFor="username">username</label>
+                    <input
+                      type="text"
+                      name="username"
+                      id="username"
+                      required
+                      autoComplete="off"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone">phone</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      required
+                      autoComplete="off"
+                    />
+                  </div>
                   <div>
                     <label htmlFor="email">email</label>
                     <input
@@ -38,14 +58,14 @@ export const Login = () => {
                   </div>
                   <br />
                   <button type="submit" className="btn btn submit">
-                    Login Now
+                    Register Now
                   </button>
                 </form>
               </div>
             </div>
           </div>
         </main>
-      </selction>
+      </section>
     </>
   );
 };
