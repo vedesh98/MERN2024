@@ -12,6 +12,7 @@ export const Login = () => {
                   width="500"
                   height="500"
                 />
+                
               </div>
               <div className="login-form">
                 <h1 className="main-deading mb-3">login form</h1>
