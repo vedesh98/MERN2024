@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const Register = () => {
   const [user, setUser] = useState({
-    username: " vede",
+    username: " ",
     phone: " ",
     email: "",
     password: " ",
@@ -17,6 +17,12 @@ export const Register = () => {
       ...user,
       [name]: value,
     });
+  };
+
+  // handling the form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(user);
   };
 
   return (
@@ -35,7 +41,7 @@ export const Register = () => {
               </div>
               <div className="registration-form">
                 <h1 className="main-deading mb-3">registration form</h1>
-                <form action="">
+                <form onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="username">username</label>
                     <input
