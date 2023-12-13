@@ -9,3 +9,12 @@ ul {
     display: flex;
     gap: 3.2rem;
 }
+
+.container-footer {
+    background-color: #646cff;
+    /* max-width: 140rem; */
+    padding: 4.2rem 2.4rem;
+    display: flex;
+    justify-content: center;
+
+}
