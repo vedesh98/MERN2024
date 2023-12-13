@@ -73,6 +73,11 @@ li {
     grid-template-columns: repeat(2, 1fr);
 }
 
+
+.grid-four-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 /* module rules  */
 button {
     text-transform: capitalize;
@@ -99,7 +104,8 @@ button {
     .hero-content {
         & p {
             margin: 2.4rem 0 4.8rem 0;
-            &:first-child{
+
+            &:first-child {
                 margin: 0 0 1.2rem 0;
             }
         }
@@ -107,9 +113,24 @@ button {
 
     .hero-image {
         display: flex;
-        justify-content:  center;
+        justify-content: center;
+
+        & img {
+            width: 70%;
+            height: auto;
+
+        }
 
     }
+}
+
+.secondary-btn {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 0.2rem var(--btn-color);
+    margin-left: 3.2rem;
+
+
+
 }
 
 
@@ -123,3 +144,88 @@ a:hover,
 a.active {
     color: #535bf2;
 }
+
+/* analytics Section */
+.section-analytics {
+    margin: 9.6rem 0;
+
+    & .container {
+        background-color: var(--bg-color);
+        border-radius: 1rem;
+    }
+
+    & .grid {
+        color: var(--dark-color);
+
+        & .div1 {
+            text-align: center;
+            border-right: 0.2rem solid var(--dark-color);
+
+            &:last-child {
+                border: none;
+            }
+
+            & h2 {
+                font-size: 4.8rem;
+            }
+
+            & p {
+                text-transform: cap;
+            }
+
+        }
+    }
+}
+
+/* End analytics Section */
+
+/* section contact */
+.section-contact {
+    & .contact-content {
+        padding: 0;
+
+        & h1 {
+            margin-bottom: 3.2rem;
+
+        }
+    }
+
+    & .container {
+        padding-top: 3.2rem;
+    }
+
+    & .contact-img {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        & img {
+            width: 80%;
+            height: auto;
+        }
+    }
+
+    & .contact-form {
+        & form {
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+        }
+
+        & label {
+            display: block;
+            margin-bottom: 1.2rem;
+            text-transform: capitalize;
+        }
+
+        & input,
+        textarea {
+            width: 80%;
+            padding: 0.2rem 0.6rem;
+        }
+
+    }
+}
+
+/* end section contact */
+

@@ -37,11 +37,11 @@ export const Login = () => {
                   src="/images/Bear-and-Bull.jpg"
                   alt="testing image"
                   width="600"
-                  height="600"
+                  height="500"
                 />
               </div>
               <div className="login-form">
-                <h1 className="main-deading mb-3">login form</h1>
+                <h1 className="main-deading mb-3">Login Form</h1>
                 <form onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="email">email</label>
