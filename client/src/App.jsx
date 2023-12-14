@@ -6,7 +6,7 @@ import { Service } from "../src/pages/Service";
 import { Register } from "../src/pages/Register";
 import { Login } from "./pages/Login";
 import { Navbar1 } from "./components/Navbar.jsx";
-import { Footer } from "./components/footer.jsx";
+import { Footer } from "./components/Footer.jsx";
 import { Error } from "./pages/error.jsx";
 
 const App = () => {
