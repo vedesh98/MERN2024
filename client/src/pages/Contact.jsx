@@ -31,10 +31,11 @@ export const Contact = () => {
         <div className="container grid grid-two-cols">
           <div className="contact-img">
             <img
-              src="/images/27-7-Icon.webp"
+              src="/images/24-7.jpg"
               alt="testing image"
-              width="600"
-              height="500"
+              // width="50"
+              // height="50"
+          
             />
           </div>
           <div className="contact-form">
@@ -68,7 +69,7 @@ export const Contact = () => {
                 <textarea
                   name="message"
                   id="message"
-                  cols="30"
+                  cols="45"
                   rows="06"
                   value={user.message}
                   onChange={handleInput}
