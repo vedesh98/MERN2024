@@ -33,8 +33,8 @@ export const Contact = () => {
             <img
               src="/images/24-7.jpg"
               alt="testing image"
-              // width="50"
-              // height="50"
+              width="500"
+              height="500"
           
             />
           </div>
