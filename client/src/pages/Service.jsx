@@ -1,4 +1,6 @@
+import { Video } from "./video";
+
 export const Service = () => {
-    return <h1>Hello Servie page</h1>;
+    return <><Video/></>;
   };
   
