@@ -22,3 +22,5 @@ src/components/Dropdown.jsx
 *.njsproj
 *.sln
 *.sw?
+
+/public/video/1. Inception - Namaste React LIVE.mp4
