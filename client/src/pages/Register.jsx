@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Dropdown from "../components/Dropdown";
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -65,6 +66,11 @@ export const Register = () => {
                       value={user.phone}
                       onChange={handleInput}
                     />
+                    {/* <Dropdown
+                      // options={["Option 1", "Option 2", "Option 3", "N/A"]}
+                      // defaultValue={"as"}
+                      // onChange={handleInput}
+                    /> */}
                   </div>
                   <div>
                     <label htmlFor="email">email</label>
