@@ -31,15 +31,16 @@ export const Login = () => {
       <section>
         <main>
           <div className="section-registration">
-            <div className="container grid grid-two-cols">
-              <div className="resitration-image">
+            <div className="container flex">
+              {/* grid-two-cols"> */}
+              {/* <div className="resitration-image">
                 <img
                   src="/images/Bear-and-Bull.jpg"
                   alt="testing image"
                   width="500"
                   height="500"
                 />
-              </div>
+              </div> */}
               <div className="registration-form">
                 <h1 className="main-heading mb-3">Login Form</h1>
                 <form onSubmit={handleSubmit}>

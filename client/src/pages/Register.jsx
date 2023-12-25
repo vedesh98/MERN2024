@@ -31,15 +31,15 @@ export const Register = () => {
       <section>
         <main>
           <div className="section-registration">
-            <div className="container grid grid-two-cols">
-              <div className="resitration-image">
+            <div className="container flex">
+              {/* <div className="resitration-image">
                 <img
                   src="/images/Bear-and-Bull.jpg"
                   alt="testing image"
                   width="600"
                   height="500"
                 />
-              </div>
+              </div> */}
               <div className="registration-form">
                 <h1 className="main-heading mb-3">registration Form</h1>
                 <form onSubmit={handleSubmit}>
@@ -66,11 +66,7 @@ export const Register = () => {
                       value={user.phone}
                       onChange={handleInput}
                     />
-                    {/* <Dropdown
-                      // options={["Option 1", "Option 2", "Option 3", "N/A"]}
-                      // defaultValue={"as"}
-                      // onChange={handleInput}
-                    /> */}
+                    
                   </div>
                   <div>
                     <label htmlFor="email">email</label>

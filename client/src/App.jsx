@@ -8,7 +8,8 @@ import { Login } from "./pages/Login";
 import { Navbar1 } from "./components/Navbar.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Error } from "./pages/error.jsx";
-import { Video } from "./pages/video.jsx";
+// import { Video } from "./pages/video.jsx";
+// import { Newloginsingup } from "./components/Loginsignup.jsx";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           {/* <Route path="/video" element={<Video />} /> */}
+          {/* <Route path="/newlogin" element={<Newloginsingup />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
