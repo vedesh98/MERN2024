@@ -232,11 +232,11 @@ a.active {
         display: flex;
         justify-content: start;
         align-items: center;
-
+/* 
         & img {
             width: 50%;
             height: 80%;
-        }
+        } */
     }
 
     & .contact-form {

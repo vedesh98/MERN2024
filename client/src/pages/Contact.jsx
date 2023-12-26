@@ -28,14 +28,13 @@ export const Contact = () => {
         <div className="contact-content container">
           <h1 className="main-heading">contact us</h1>
         </div>
-        <div className="container grid grid-two-cols">
+        <div className="container flex">
           <div className="contact-img">
             <img
               src="/images/24-7.jpg"
               alt="testing image"
-              width="500"
+              width="600"
               height="500"
-          
             />
           </div>
           <div className="contact-form">
