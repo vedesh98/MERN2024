@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const Video = () => {
-  const [video, setVideo] = useState({});
+  // const [video, setVideo] = useState({});
 
   return (
     <>
@@ -13,7 +13,6 @@ export const Video = () => {
                 
               </div>
               <div>
-                {/* <Container> */}
                 <div className="ratio ratio-16x9">
                   <iframe
                     width="560"
@@ -25,7 +24,6 @@ export const Video = () => {
                     allowfullscreen
                   ></iframe>
                 </div>
-                {/* </Container> */}
               </div>
             </div>
           </div>

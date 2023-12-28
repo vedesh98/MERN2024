@@ -12,7 +12,7 @@ export const Register = () => {
   const handleInput = (e) => {
     let name = e.target.name;
     let value = e.target.value;
-    console.log(e.target);
+    // console.log(e.target);
 
     setUser({
       ...user,
@@ -21,9 +21,22 @@ export const Register = () => {
   };
 
   // handling the form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(user);
+  const handleSubmit = async (e) => {
+    // console.log(user);
+    try {
+      e.preventDefault();
+      const response = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+
+      console.log(response);
+    } catch (error) {
+      console.log("register:" + error);
+    }
   };
 
   return (
@@ -66,7 +79,6 @@ export const Register = () => {
                       value={user.phone}
                       onChange={handleInput}
                     />
-                    
                   </div>
                   <div>
                     <label htmlFor="email">email</label>
