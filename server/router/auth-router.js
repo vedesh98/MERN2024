@@ -14,4 +14,5 @@ router.route("/").get(authcontroller.home);
 
 router.route("/register").post(validate(validator.signupSchema), authcontroller.register);
 router.route("/login").post(validate(validator.loginSchema), authcontroller.login);
+
 module.exports = router;

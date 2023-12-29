@@ -12,7 +12,7 @@ const contactSchema = new Schema({
     message: {
         type: String,
     }
-})
+}, { timestamps: true, })
 
 const Contact = new model('Contact', contactSchema);
 
