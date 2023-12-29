@@ -36,7 +36,7 @@ module.exports.register = async (request, response) => {
             phone,
             password
         });
-
+        
         response
             .status(201)
             .json({

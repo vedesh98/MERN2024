@@ -1,12 +1,15 @@
 import { useState } from "react";
 import Dropdown from "../components/Dropdown";
+import { useNavigate } from "react-router-dom";
+
+const URL = `http://localhost:5000/api/auth/register`;
 
 export const Register = () => {
   const [user, setUser] = useState({
-    username: " ",
-    phone: " ",
+    username: "",
+    password: "",
     email: "",
-    password: " ",
+    phone: "",
   });
 
   const handleInput = (e) => {
@@ -20,22 +23,31 @@ export const Register = () => {
     });
   };
 
+  const navigate = useNavigate();
   // handling the form submission
   const handleSubmit = async (e) => {
-    // console.log(user);
     try {
       e.preventDefault();
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      console.log(user);
+      const body = JSON.stringify(user);
+      console.log(body);
+      const response = await fetch(URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(user),
+        body: body,
       });
-
+      if (response.ok) {
+        navigate("/login", {
+          state: {
+            email: user.email,
+          },
+        });
+      }
       console.log(response);
     } catch (error) {
-      console.log("register:" + error);
+      console.log("register:", error);
     }
   };
 
@@ -53,7 +65,7 @@ export const Register = () => {
                   height="500"
                 />
               </div> */}
-              <div className="registration-form">
+              <div className="registration-form form">
                 <h1 className="main-heading mb-3">registration Form</h1>
                 <form onSubmit={handleSubmit}>
                   <div>

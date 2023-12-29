@@ -6,6 +6,7 @@ const Contact = require("../models/user-contact");
 module.exports.contactform = async (request, response) => {
     try {
         const responseto = request.body;
+        console.log('contact');
         await Contact.create(responseto);
         return response.status(200).json({ message: "message send successfully" });
 

@@ -1,14 +1,18 @@
 import { useState } from "react";
-import Dropdown from "../components/Dropdown";
+import { useLocation, useNavigate } from "react-router-dom";
+const URL = `http://localhost:5000/api/auth/login`;
+// import Dropdown from "../components/Dropdown";
 
-export const Login = () => {
+export const Login = (query) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { email } = location.state || "";
+
+  console.log("state", location.state);
   const [user, setUser] = useState({
-    email: "",
+    email: email,
     password: "",
   });
-  // const Dropown = () => {
-  //   return ValueList.map((Name) => `<option value="${Name}">`).join("");
-  // };
 
   const handleInput = (e) => {
     let name = e.target.name;
@@ -21,9 +25,36 @@ export const Login = () => {
   };
 
   // handling the form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(user);
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      console.log(user);
+      const body = JSON.stringify(user);
+      console.log(body);
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: body,
+      });
+
+      if (response.ok) {
+        alert("Login Successful");
+        console.log(response.token);
+
+        navigate("/", {
+          state: {
+            token: response.token,
+            email: user.email,
+          },
+        });
+      } else {
+        alert("Invalid creadentials");
+      }
+    } catch (error) {
+      console.log("register:", error);
+    }
   };
 
   return (
@@ -41,7 +72,7 @@ export const Login = () => {
                   height="500"
                 />
               </div> */}
-              <div className="registration-form">
+              <div className="registration-form form">
                 <h1 className="main-heading mb-3">Login Form</h1>
                 <form onSubmit={handleSubmit}>
                   <div>

@@ -18,9 +18,23 @@ export const Contact = () => {
   };
 
   // handling the form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(user);
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      const body = JSON.stringify(user);
+      console.log(body);
+      const response = await fetch(`http://localhost:5000/api/form/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: body,
+      });
+
+      console.log(response);
+    } catch (error) {
+      console.log("register:" + error);
+    }
   };
   return (
     <>
@@ -37,7 +51,7 @@ export const Contact = () => {
               height="500"
             />
           </div>
-          <div className="contact-form">
+          <div className="contact-form form">
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="username">username</label>
