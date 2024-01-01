@@ -30,7 +30,6 @@ export const Login = (query) => {
       e.preventDefault();
       console.log(user);
       const body = JSON.stringify(user);
-      console.log(body);
       const response = await fetch(URL, {
         method: "POST",
         headers: {
@@ -41,14 +40,16 @@ export const Login = (query) => {
 
       if (response.ok) {
         alert("Login Successful");
-        console.log(response.token);
+        const response_data = response.json();
+        localStorage.setItem("token", response_data);
+        console.log("token", response_data);
 
-        navigate("/", {
-          state: {
-            token: response.token,
-            email: user.email,
-          },
-        });
+        // navigate("/", {
+        //   state: {
+        //     token: response.token,
+        //     email: user.email,
+        //   },
+        // });
       } else {
         alert("Invalid creadentials");
       }

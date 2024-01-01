@@ -36,7 +36,7 @@ module.exports.register = async (request, response) => {
             phone,
             password
         });
-        
+
         response
             .status(201)
             .json({
@@ -58,7 +58,7 @@ module.exports.register = async (request, response) => {
 // *----------------------
 //* User Login Logic
 // *----------------------
-module.exports.login = async (request, response) => {
+module.exports.login = async (request, response, next) => {
     try {
         const { email, password } = request.body;
 
@@ -81,6 +81,7 @@ module.exports.login = async (request, response) => {
             extraDetails: err
         }
         next(error);
+        // throw error
     }
 }
 

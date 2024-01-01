@@ -7,9 +7,9 @@ export const Service = () => {
   const navigate = useNavigate();
   const { token } = location.state || "";
   // const { token } = ;
-  if (!token) {
-    return <Error />;
-  } else {
-    return <Video />;
-  }
+  // if (!token) {
+  //   return <Error />;
+  // } else {
+  return <Video />;
+  // }
 };
