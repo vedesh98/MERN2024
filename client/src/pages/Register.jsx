@@ -65,6 +65,7 @@ export const Register = () => {
                   height="500"
                 />
               </div> */}
+              
               <div className="registration-form form">
                 <h1 className="main-heading mb-3">registration Form</h1>
                 <form onSubmit={handleSubmit}>
