@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Dropdown from "../components/Dropdown";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../sotre/auth";
 
 const URL = `http://localhost:5000/api/auth/register`;
 
@@ -65,7 +66,7 @@ export const Register = () => {
                   height="500"
                 />
               </div> */}
-              
+
               <div className="registration-form form">
                 <h1 className="main-heading mb-3">registration Form</h1>
                 <form onSubmit={handleSubmit}>
