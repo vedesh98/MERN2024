@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-const URL = `http://localhost:5000/api/auth/login`;
-// import Dropdown from "../components/Dropdown";
+import { useAuth } from "../store/auth";
+
+const URL = `http://localhost:${process.env.PORT}/api/auth/login`;
+
 
 export const Login = (query) => {
   const navigate = useNavigate();
+  const storetokenInLS = useAuth();
   const location = useLocation();
   const { email } = location.state || "";
+  
 
   console.log("state", location.state);
   const [user, setUser] = useState({
@@ -40,8 +44,8 @@ export const Login = (query) => {
 
       if (response.ok) {
         alert("Login Successful");
-        const response_data = response.json();
-        localStorage.setItem("token", response_data);
+        const response_data = await response.json();
+        storetokenInLS(response_data.token);
         console.log("token", response_data);
 
         // navigate("/", {

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Dropdown from "../components/Dropdown";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../sotre/auth";
+import { useAuth } from "../store/auth";
 
-const URL = `http://localhost:5000/api/auth/register`;
+const URL = `http://localhost:${process.env.PORT}/api/auth/register`;
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -13,6 +13,8 @@ export const Register = () => {
     phone: "",
   });
 
+  const navigate = useNavigate();
+  const storetokenInLS = useAuth();
 
   const handleInput = (e) => {
     let name = e.target.name;
@@ -24,7 +26,6 @@ export const Register = () => {
     });
   };
 
-  const navigate = useNavigate();
   // handling the form submission
   const handleSubmit = async (e) => {
     try {
@@ -40,11 +41,15 @@ export const Register = () => {
         body: body,
       });
       if (response.ok) {
-        navigate("/login", {
-          state: {
-            email: user.email,
-          },
-        });
+        // navigate("/login", {
+        //   state: {
+        //     email: user.email,
+        //   },
+        // });
+
+        const res_data = await response.json();
+        storetokenInLS(res_data.token);
+        setUser({ username: "", password: "", email: "", phone: "" });
       }
       console.log(response);
     } catch (error) {
