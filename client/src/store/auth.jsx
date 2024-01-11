@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={storetokenInLS}>
+    <AuthContext.Provider value={{storetokenInLS}}>
       {children}
     </AuthContext.Provider>
   );

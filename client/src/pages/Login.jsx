@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
+const server_port = 5000;
 
-const URL = `http://localhost:${process.env.PORT}/api/auth/login`;
-
+const URL = `http://localhost:${server_port}/api/auth/login`;
 
 export const Login = (query) => {
   const navigate = useNavigate();
   const storetokenInLS = useAuth();
   const location = useLocation();
   const { email } = location.state || "";
-  
 
   console.log("state", location.state);
   const [user, setUser] = useState({
@@ -45,8 +44,9 @@ export const Login = (query) => {
       if (response.ok) {
         alert("Login Successful");
         const response_data = await response.json();
-        storetokenInLS(response_data.token);
-        console.log("token", response_data);
+        // storetokenInLS(response_data);
+        console.log(response_data.token);
+        // console.log("token", response_data);
 
         // navigate("/", {
         //   state: {

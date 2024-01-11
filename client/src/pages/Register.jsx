@@ -2,8 +2,9 @@ import { useState } from "react";
 import Dropdown from "../components/Dropdown";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
+const server_port = 5000;
 
-const URL = `http://localhost:${process.env.PORT}/api/auth/register`;
+const URL = `http://localhost:${server_port}/api/auth/register`;
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -49,6 +50,7 @@ export const Register = () => {
 
         const res_data = await response.json();
         storetokenInLS(res_data.token);
+        console.log(res_data.token);
         setUser({ username: "", password: "", email: "", phone: "" });
       }
       console.log(response);
