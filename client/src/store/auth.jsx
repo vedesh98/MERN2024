@@ -14,6 +14,7 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
+
 export const useAuth = () => {
   const authContextValue = useContext(AuthContext);
   if (!authContextValue) {
