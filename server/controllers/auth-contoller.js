@@ -26,7 +26,6 @@ module.exports.register = async (request, response) => {
 
         const userexist = await User.findOne({ email: email });
 
-
         if (userexist) {
             return response.json({ msg: "email already exists" })
         }
