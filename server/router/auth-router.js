@@ -5,10 +5,6 @@ const validator = require("../validator/auth-validator");
 const validate = require("../middleware/validate-middleware");
 
 
-
-
-
-
 router.route("/").get(authcontroller.home);
 
 

@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 export const Navbar1 = () => {
+  const isToken = localStorage.getItem("token") ? true : false;
+  console.log(localStorage.getItem("token"));
   return (
     <>
       <header>
@@ -20,9 +22,11 @@ export const Navbar1 = () => {
               <li>
                 <NavLink to="/contact">Contact</NavLink>
               </li>
-              <li>
-                <NavLink to="/service">Service</NavLink>
-              </li>
+              {isToken && (
+                <li>
+                  <NavLink to="/service">Service</NavLink>
+                </li>
+              )}
               <li>
                 <NavLink to="/register">Register</NavLink>
               </li>

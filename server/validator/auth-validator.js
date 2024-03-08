@@ -48,3 +48,13 @@ module.exports.contactSchema = z.object({
         .trim()
         .email({ message: "Invalid email address" }),
 })
+
+
+module.exports.videoSchema = z.object({
+    title: z.string({ required_error: "Title is reuired" }),
+    description: z.string({ required_error: "Description is reuired" }),
+    video_file_path: z.string({ required_error: "Path is reuired" }),
+    thumbnail_URL: z.string({ required_error: "URL is reuired" }),
+    subscription: z.string({ required_error: "Subscription level is reuired" }),
+    //  requirements: ,
+})

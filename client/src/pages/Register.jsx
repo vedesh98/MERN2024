@@ -49,9 +49,12 @@ export const Register = () => {
         // });
 
         const res_data = await response.json();
-        storetokenInLS(res_data.token);
+        // storetokenInLS(res_data.token);
         console.log(res_data.token);
-        setUser({ username: "", password: "", email: "", phone: "" });
+        localStorage.setItem("token", JSON.stringify(res_data.token));
+        // setUser({ username: "", password: "", email: "", phone: "" });
+        setUser(user);
+        console.log(user);
       }
       console.log(response);
     } catch (error) {
