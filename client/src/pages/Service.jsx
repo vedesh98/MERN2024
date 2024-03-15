@@ -1,4 +1,4 @@
-import { Video } from "./video";
+import { Video } from "./Video";
 import { Error } from "./error.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
 
