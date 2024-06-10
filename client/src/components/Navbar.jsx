@@ -22,11 +22,11 @@ export const Navbar1 = () => {
               <li>
                 <NavLink to="/contact">Contact</NavLink>
               </li>
-              {isToken && (
+              {/* {isToken && ( */}
                 <li>
                   <NavLink to="/service">Service</NavLink>
                 </li>
-              )}
+              {/* )} */}
               <li>
                 <NavLink to="/register">Register</NavLink>
               </li>
