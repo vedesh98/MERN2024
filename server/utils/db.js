@@ -7,11 +7,11 @@ const url = "mongodb://0.0.0.0:27017/rrrr";
 
 const connectDB = async () => {
     try {
-        console.log(insever);
+        console.log('insever');
         await mongoose.connect(url);
         console.log("Connected");
     } catch (error) {
-        console.log(error);
+        console.log('errDB', error);
         process.exit(0);
     }
 }
