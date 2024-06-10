@@ -20,7 +20,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/form", contactRouter);
 app.use("/api/service", videolistRouter);
 
-console.log("IN SERVER");
+console.log("IN SERVER",process.env.PORT);
 app.use(errorMiddleware);
 
 connectDB().then(() => {
