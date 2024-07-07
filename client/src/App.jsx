@@ -11,8 +11,8 @@ import { Error } from "./pages/error.jsx";
 import { Video } from "./pages/Video.jsx";
 // import { Video } from "./pages/video.jsx";
 // import { Newloginsingup } from "./components/Loginsignup.jsx";
-URL =
-  "https://drive.google.com/file/d/1eOOCmXeZ-fcfyKA-1qx9Q7R53pFRTxPx/preview";
+// URL =
+//   "https://drive.google.com/file/d/1eOOCmXeZ-fcfyKA-1qx9Q7R53pFRTxPx/preview";
 
 const App = () => {
   return (
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/service" element={<Video />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/video" element={<Video video_url={URL} />} />
+          {/* <Route path="/video" element={<Video />} /> */}
           {/* <Route path="/newlogin" element={<Newloginsingup />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+let s1 = `https://bgryt01.onrender.com/api/form/contact`;
 export const Contact = () => {
   const [user, setUser] = useState({
     username: "",
@@ -23,7 +24,7 @@ export const Contact = () => {
       e.preventDefault();
       const body = JSON.stringify(user);
       console.log(body);
-      const response = await fetch(`http://localhost:5000/api/form/contact`, {
+      const response = await fetch( s1, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

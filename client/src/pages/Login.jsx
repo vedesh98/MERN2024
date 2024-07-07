@@ -3,7 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 const server_port = 5000;
 
-const URL = `http://localhost:${server_port}/api/auth/login`;
+// const URL = `http://localhost:${server_port}/api/auth/login`;
+const URL = "https://bgryt01.onrender.com/api/auth/register";
 
 export const Login = (query) => {
   const navigate = useNavigate();

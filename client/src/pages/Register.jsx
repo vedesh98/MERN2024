@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 const server_port = 5000;
 
-const URL = `http://localhost:${server_port}/api/auth/register`;
+// const URL = `http://localhost:${server_port}/api/auth/register`;
+const URL = `https://bgryt01.onrender.com/api/auth/register`;
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -76,7 +77,6 @@ export const Register = () => {
                   height="500"
                 />
               </div> */}
-
               <div className="registration-form form">
                 <h1 className="main-heading mb-3">registration Form</h1>
                 <form onSubmit={handleSubmit}>

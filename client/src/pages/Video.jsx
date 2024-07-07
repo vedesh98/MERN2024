@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export const Video = ({ video_url }) => {
-  const [video, setVideo] = useState({});
+export const Video = () => {
+  // const [video, setVideo] = useState({});
   // const URL = "https://www.youtube.com/embed/bGzanfKVFeU?si=XKcOCMMT4crt-FkD";
-  // const URL =
-  //   "https://drive.google.com/file/d/1eOOCmXeZ-fcfyKA-1qx9Q7R53pFRTxPx/preview";
-  console.log("name:", video_url);
+  const URL =
+    "https://drive.google.com/file/d/1eOOCmXeZ-fcfyKA-1qx9Q7R53pFRTxPx/preview";
+  // console.log("name:", video_url);
 
   return (
     <>
@@ -19,7 +19,7 @@ export const Video = ({ video_url }) => {
                   <iframe
                     width="560"
                     height="315"
-                    src={video_url}
+                    src={ URL }
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
