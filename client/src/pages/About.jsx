@@ -1,13 +1,17 @@
 import { Analytics } from "../components/Analytics.jsx";
 import { NavLink } from "react-router-dom";
+import AnimatedText from "../components/AnimatedText.jsx";
 export const About = () => {
   return (
     <>
-      <main>
-        <section className="selection-hero">
+      <main className="flex w-full flex-col items-center justify-center">
+      <AnimatedText text={"Learning Ignites Achievement!"} className="mb-12 mt-10 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8" />
+        <section className="pt-16">
+          
           <div className="container grid grid-two-cols">
-            <div className="hero-content">
-              <p>
+            <div className="flex flex-col justify-start">
+              
+              <p className="font-medium mb-6">
                 At {<NavLink to="/">BGryt</NavLink>}, we empower confident
                 investors to navigate the dynamic world of trading. We're not
                 just another platform; we're a community of passionate
@@ -17,78 +21,55 @@ export const About = () => {
                 tools and expert guidance, we built a platform that caters to
                 every level of experience. Whether you're a seasoned veteran or
                 a curious newcomer, we offer:
-                <p>
+                </p>
+                <p className="font-medium mb-6">
                   A robust and user-friendly trading platform: Experience
                   intuitive navigation, advanced charting tools, real-time
                   market data, and a wide range of tradable assets, all at your
                   fingertips.
                 </p>
-                <p>
+                <p className="font-medium mb-6">
                   Comprehensive educational resources: Hone your skills with
                   in-depth articles, video tutorials, webinars led by industry
                   professionals, and interactive courses designed to demystify
                   the intricacies of trading.
                 </p>
-                <p>
+                <p className="font-medium mb-6">
                   A supportive and vibrant community: Connect with fellow
                   traders, share experiences, and learn from each other in our
                   active forums and live chat rooms.
                 </p>
-                <p>
+                <p className="font-medium mb-6">
                   Dedicated customer support: Our knowledgeable team is always
                   available to answer your questions, address your concerns, and
                   guide you on your trading journey.
                 </p>
-                <p>
+                <p className="font-medium mb-6">
                   More than just a platform, we're your trusted partner in the
                   pursuit of financial success. We believe in transparency,
                   integrity, and fostering an environment where everyone feels
                   empowered to reach their full potential.
                 </p>
-                {/* <p>Here are the core values that guide us:</p>
-                <p>
-                  <ul>
-                    Innovation: We're constantly pushing the boundaries to
-                    develop cutting-edge tools and resources that stay ahead of
-                    the curve.
-                  </ul>
-                  <ul>
-                    Education: Knowledge is power, and we're dedicated to
-                    providing our users with the tools and information they need
-                    to make informed decisions.
-                  </ul>
-                  <ul>
-                    Community: We believe in the power of collaboration and
-                    support, and we strive to create a welcoming and inclusive
-                    environment for traders of all levels.
-                  </ul>
-                  <ul>
-                    Integrity: We operate with the highest ethical standards,
-                    ensuring transparency and fairness in all our dealings.
-                  </ul>
-                  <ul>
-                    Empowerment: We empower our users to take control of their
-                    financial future and achieve their investment goals.
-                  </ul>
-                </p> */}
+
+                <p className="font-medium mb-6">
                 Ready to join us on this exciting journey? Create your free
                 account today and discover the world of possibilities that
                 awaits you at {<NavLink to="/">BGryt</NavLink>}. We're here to
                 support you every step of the way.
               </p>
-              <div className="btn btn-group">
+              <div className="flex items-center self-start mt-12 lg:self-center">
                 <a href="/contact">
-                  <button className="btn">connect now</button>
+                  <button className="dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:bg-light flex items-center bg-dark text-light p-5 px-10 rounded-lg text-2xl font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark capitalize">connect now</button>
                 </a>
                 <a href="/service">
-                  <button className="btn secondary-btn">learn more now</button>
+                  <button className="ml-8 p-5 px-10 text-2xl font-semibold capitalize border-dark text-dark underline">learn more now</button>
                 </a>
               </div>
             </div>
             {/* hero images */}
             <div className="hero-image c24-7">
               <img
-                src="/images/Bear-and-Bull.jpg"
+                src="/images/teach.png"
                 alt="coding together"
                 width="700"
                 height="500"

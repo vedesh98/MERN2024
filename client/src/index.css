@@ -1,14 +1,19 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    /* font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif; */
     color-scheme: light dark;
 }
 
 :root {
     --bg-color: #f4f3ff;
-    --btn-color: #007bff; 
+    /* --btn-color: #007bff;  */
      /* #646cff; */
     --dark-color: #242424;
     --helper-color: #99b9ff;
@@ -31,7 +36,6 @@ h1 {
 
 p,
 li,
-label,
 input,
 textarea {
     font-size: 1.8rem;
@@ -97,7 +101,7 @@ li {
 }
 
 /* module rules  */
-button {
+/* button {
     text-transform: capitalize;
     padding: 1rem 2.2 rem;
     font-size: 1.7rem;
@@ -108,12 +112,12 @@ button {
     cursor: pointer;
     letter-spacing: .1rem;
     transition: border-color 0.3s;
-}
+} */
 
 
 
 /* Hero section  */
-.section-hero {
+/* .section-hero {
     & .grid {
         align-items: center;
 
@@ -140,31 +144,31 @@ button {
         }
 
     }
-}
+} */
 
 
 /* .c24-7 {
     max-width: 1%;
 } */
-.secondary-btn {
+/* .secondary-btn {
     background-color: transparent;
     box-shadow: inset 0 0 0 0.2rem var(--btn-color);
     margin-left: 3.2rem;
-}
+} */
 
 
 /* state rule */
-button:hover {
-    box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+/* button:hover {
+    box-shadow: inset 0 0 0 0.2rem var(--bg-color); */
     /* border: 0.2rem solid #fff; */
-}
+/* } */
 
 /* a:hover, */
 /* a.active {
     /* color: #535bf2; */
 /* } */
 
-.main-heading {
+/* .main-heading {
     position: relative;
     text-transform: capitalize;
 
@@ -178,7 +182,7 @@ button:hover {
         background-color: var(--btn-color);
     }
 
-}
+} */
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -189,7 +193,7 @@ button:hover {
 }
 
 /* analytics Section */
-.section-analytics {
+/* .section-analytics {
     margin: 9.6rem 0;
 
     & .container {
@@ -218,7 +222,7 @@ button:hover {
 
         }
     }
-}
+} */
 
 /* End analytics Section */
 
@@ -470,7 +474,7 @@ button:hover {
   ** media query section css
   ** -------------------------  */
 
-@media (width <=998px) {
+/* @media (width <=998px) {
     .grid-two-cols {
         grid-template-columns: 1fr;
     }
@@ -511,7 +515,7 @@ button:hover {
             }
         }
     }
-}
+} */
 
 
 input[type="text"],
