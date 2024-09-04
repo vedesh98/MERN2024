@@ -8,7 +8,10 @@ import { Navbar1 } from "./components/Navbar.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Error } from "./pages/error.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
+// import VideoPlayer from "./pages/VideoPlayer.jsx";
+import VideoModule from "./pages/VideoModule.jsx";
 import VideoPlayer from "./pages/VideoPlayer.jsx";
+import VideoPage from "./components/VideoPage.jsx";
 
 const App = () => {
   return (
@@ -21,7 +24,8 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/service" element={<ServicePage />} />
-            <Route path="/video/:videoUrl" element={<VideoPlayer />} />
+            <Route path="/video" element={<VideoModule/>} />
+            <Route path="/video/:videoUrl" element={<VideoPlayer/>} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<Error />} />

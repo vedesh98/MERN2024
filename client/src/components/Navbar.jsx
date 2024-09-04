@@ -6,6 +6,8 @@ export const Navbar1 = () => {
   console.log(localStorage.getItem("token"));
   console.log("Navbar1 component rendered");
 
+  
+
   const CustomLink = ({ href, title, className = "" }) => {
     const location = useLocation();
     return (
@@ -24,17 +26,17 @@ export const Navbar1 = () => {
 
   return (
     <>
-      <header className="w-full z-10 px-32 py-8 relative font-medium flex items-center justify-between text-dark">
-        <div className="w-full flex justify-between items-center mt-5">
+      <header className="w-full z-10 px-5 py-8 relative font-normal text-xl flex items-center justify-between text-dark">
+        <div className="w-full flex justify-between items-center mt-1">
           <nav className="flex w-full items-center">
             <Link to="/"  className="mr-10 ml-5" >BGryt</Link>
             <div className="flex-grow"></div>
             <CustomLink href="/" title="Home" className="mr-5" />
             <CustomLink href="/about" title="About" className="mx-5" />
             <CustomLink href="/contact" title="Contact" className="mx-5" />
-            <CustomLink href="/service" title="Service" className="mx-5" />
-            <CustomLink href="/register" title="Register" className="mx-5" />
-            <CustomLink href="/login" title="Login" className="ml-5 mr-10" />
+            <CustomLink href="/service" title="Service" className="ml-5 mr-16" />
+            {/* <CustomLink href="/register" title="Register" className="mx-5" /> */}
+            {/* <CustomLink href="/login" title="Login" className="ml-5 mr-10" /> */}
           </nav>
         </div>
       </header>

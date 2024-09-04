@@ -5,6 +5,8 @@ import video1 from '../assets/videos/ted.mp4';
 const ServicePage = () => {
     const navigate = useNavigate();
 
+    
+
     const courses = [
       { id: 1, title: 'Stock Market Basics', thumbnail: 'https://i.ytimg.com/vi/8rIviI0ZKNA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAVta4Aepo1fzXCXNljA_4KAxmz7Q', videoUrl: video1 },
       { id: 2, title: 'Technical Analysis 101', thumbnail: 'https://i.ytimg.com/vi/8rIviI0ZKNA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAVta4Aepo1fzXCXNljA_4KAxmz7Q', videoUrl: 'video2.mp4' },
@@ -21,23 +23,23 @@ const ServicePage = () => {
     ];
 
     const handleThumbnailClick = (videoUrl) => {
-        navigate(`/video/${encodeURIComponent(videoUrl)}`);
+        navigate(`/video`);
     };
 
     return (
         <div className="container mx-auto p-4">
             <h1 className="text-2xl font-bold mb-4">Our Courses</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
                 {courses.map(course => (
                     <div 
                         key={course.id} 
-                        className="cursor-pointer"
+                        className="cursor-pointer mx-5 my-14"
                         onClick={() => handleThumbnailClick(course.videoUrl)}
                     >
                         <img 
                             src={course.thumbnail} 
                             alt={course.title} 
-                            className="w-full h-auto rounded-lg shadow-lg"
+                            className="w-auto h-auto rounded-lg shadow-lg"
                         />
                         <p className="mt-2 text-center text-lg font-medium">{course.title}</p>
                     </div>

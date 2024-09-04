@@ -4,6 +4,8 @@ import App from "./App.jsx";
 import { AuthProvider } from "./store/auth.jsx";
 import WebFont from 'webfontloader';
 
+
+
 WebFont.load({
   google: {
     families: ['Montserrat:500,700', 'sans-serif'],
