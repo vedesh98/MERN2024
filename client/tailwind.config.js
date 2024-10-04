@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const { fontFamily } = require("tailwindcss/defaultTheme");
- 
+
 module.exports = {
   content: [
     "./index.html",
@@ -24,6 +24,7 @@ module.exports = {
   //   screens: {
   //     "2xl": { max: "1535px" },
   //     // => @media (max-width: 1535px) { ... }
+
   
   //     xl: { max: "1279px" },
   //     // => @media (max-width: 1279px) { ... }
@@ -37,10 +38,12 @@ module.exports = {
   //     sm: { max: "639px" },
   //     // => @media (max-width: 639px) { ... }
   
+
   //     xs: { max: "479px" },
   //     // => @media (max-width: 479px) { ... }
   // },
   },
+
   
 
   plugins: [],

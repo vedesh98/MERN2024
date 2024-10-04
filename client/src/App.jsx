@@ -8,7 +8,6 @@ import { Navbar1 } from "./components/Navbar.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Error } from "./pages/error.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
-// import VideoPlayer from "./pages/VideoPlayer.jsx";
 import VideoModule from "./pages/VideoModule.jsx";
 import VideoPlayer from "./pages/VideoPlayer.jsx";
 import VideoPage from "./components/VideoPage.jsx";

@@ -18,10 +18,12 @@ const VideoPlayer = () => {
     }, []);
 
     return (
+
         
         <div className='flex'>
             
         
+
         <div className="relative flex flex-col justify-center h-screen p-4 mt-10">
             <div className="relative w-1/2 mr-[40rem]">
                 <video

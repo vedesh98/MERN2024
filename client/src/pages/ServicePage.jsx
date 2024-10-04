@@ -5,7 +5,6 @@ import video1 from '../assets/videos/ted.mp4';
 const ServicePage = () => {
     const navigate = useNavigate();
 
-    
 
     const courses = [
       { id: 1, title: 'Stock Market Basics', thumbnail: 'https://i.ytimg.com/vi/8rIviI0ZKNA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAVta4Aepo1fzXCXNljA_4KAxmz7Q', videoUrl: video1 },
@@ -49,4 +48,6 @@ const ServicePage = () => {
     );
 };
 
+
 export default ServicePage;
+
