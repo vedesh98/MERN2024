@@ -1,8 +1,8 @@
 # MERN2024
 
-RUN Server using following command
-$ npm run start
+RUN Server using command: 
+</br> $ npm run start
 
 
-RUN Client using following command
-$ npm run dev
+RUN Client using command:
+</br> $ npm run dev
