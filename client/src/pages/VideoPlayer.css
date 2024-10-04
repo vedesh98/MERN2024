@@ -1,0 +1,49 @@
+/* VideoPlayer.css */
+
+/* Custom video player styles */
+.custom-video-player::-webkit-media-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-video-player::-webkit-media-controls-panel {
+    background-color: #1a1a1a; /* Dark background color for controls */
+}
+
+.custom-video-player::-webkit-media-controls-play-button,
+.custom-video-player::-webkit-media-controls-pause-button,
+.custom-video-player::-webkit-media-controls-mute-button,
+.custom-video-player::-webkit-media-controls-volume-slider,
+.custom-video-player::-webkit-media-controls-fullscreen-button,
+.custom-video-player::-webkit-media-controls-current-time-display,
+.custom-video-player::-webkit-media-controls-time-remaining-display {
+    color: #ffffff; /* White color for control icons */
+}
+
+.custom-video-player::-webkit-media-controls-timeline {
+    background-color: #333; /* Darker background for timeline */
+}
+
+.custom-video-player::-webkit-media-controls-current-time-display,
+.custom-video-player::-webkit-media-controls-time-remaining-display {
+    font-size: 14px; /* Adjust font size for time displays */
+}
+
+/* Responsive video container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
