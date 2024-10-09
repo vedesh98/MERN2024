@@ -35,8 +35,9 @@ export const Navbar1 = () => {
             <CustomLink href="/about" title="About" className="mx-5" />
             <CustomLink href="/contact" title="Contact" className="mx-5" />
             <CustomLink href="/service" title="Service" className="ml-5 mr-16" />
-            <CustomLink href="/register" title="Register" className="mx-5" /> 
-            <CustomLink href="/login" title="Login" className="ml-5 mr-10" />
+            <CustomLink href="/register" title="Signup" className="ml-5 mr-16"/>
+            {/* <CustomLink href="/register" title="Register" className="mx-5" /> 
+            <CustomLink href="/login" title="Login" className="ml-5 mr-10" /> */}
           </nav>
         </div>
       </header>
