@@ -23,7 +23,6 @@ module.exports.home = async (request, response) => {
 module.exports.register = async (request, response) => {
     try {
         const { username, phone, email, password } = request.body;
-
         const userexist = await User.findOne({ email: email });
 
         if (userexist) {

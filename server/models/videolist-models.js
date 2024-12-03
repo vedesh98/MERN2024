@@ -13,14 +13,16 @@ const videolistSchema = new Schema({
         require: true,
     }, thumbnail_URL: {
         type: String,
-        require: true,
-    }, subscription: {
-        type: String,
-        require: true,
-    }, requirements: {
-        type: String,
-        require: true,
-    }
+        // require: true,
+    },
+    //  subscription: {
+    //     type: String,
+    //     require: true,
+    // },
+    //  requirements: {
+    //     type: String,
+    //     require: true,
+    // }
 },{ timestamps: true, })
 
 
