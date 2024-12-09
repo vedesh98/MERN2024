@@ -24,7 +24,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/service" element={<ServicePage />} />
             <Route path="/video" element={<VideoModule/>} />
-            <Route path="/video/:videoUrl" element={<VideoPlayer/>} />
+            <Route path="/video/videoplayer" element={<VideoPlayer/>} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<Error />} />

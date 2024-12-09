@@ -21,9 +21,8 @@ const ModuleItem = ({ title, content }) => {
     setShowMore(!showMore);
   };
 
-  const handlePreviewClick = (videoUrl) => {
-    const encodedVideoUrl = encodeURIComponent(videoUrl);
-    navigate(`/video/${encodedVideoUrl}`);
+  const handlePreviewClick = () => {
+    navigate(`/video/videoplayer`);
   };
 
   return (
@@ -94,7 +93,7 @@ const ModuleItem = ({ title, content }) => {
                     <ul className="list-disc list-inside space-y-2">
                       <li>
                         Leadership Challenges for the New-age Organizations • 6 minutes • 
-                        <Link to={`/video/${decodedVideoUrl}`} className="text-blue-600 hover:underline">Preview module</Link>
+                        <h1 onClick={handlePreviewClick} className="text-blue-600 hover:underline">Preview module</h1>
                       </li>
                       {/* Add other video items here */}
                     </ul>
